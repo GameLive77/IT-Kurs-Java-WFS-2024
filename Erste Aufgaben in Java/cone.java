@@ -1,20 +1,25 @@
 import java.util.Scanner;
+import java.lang.Math;
 
 public class cone {
     
     public static void main(String[] args) {
 
-        float r, h, s, V, O;
+        double r, h, s, V, O;
         Scanner sc = new Scanner(System.in);
         
         System.out.println("Kegel Recher:");
         System.out.println("Bekannt Variable: Radius und Höhe"); 
-        System.out.println("Radius: "); x = sc.nextInt();
-        System.out.println("Höhe: "); y = sc.nextInt();
+        System.out.println("Radius: "); r = sc.nextInt();
+        System.out.println("Höhe: "); h = sc.nextInt();
 
-        sum = x * y * z; 
+        s = Math.sqrt(Math.pow(r, 2)+Math.pow(h, 2));
+        O = Math.PI*Math.pow(r, 2)+Math.PI*r*s;
+        V = Math.PI*Math.pow(r, 2)*h/3;
 
-        System.out.println("Volumen von Quader: " + sum);
+        System.out.println("Seitenlänge: " + s);
+        System.out.println("Oberfläche:" + O);
+        System.out.println("Volumen:" + V);
 
     }
 
