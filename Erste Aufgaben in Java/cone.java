@@ -10,8 +10,8 @@ public class cone {
         
         System.out.println("Kegel Recher:");
         System.out.println("Bekannt Variable: Radius und Höhe"); 
-        System.out.println("Radius: "); r = sc.nextInt();
-        System.out.println("Höhe: "); h = sc.nextInt();
+        System.out.println("Radius: "); r = sc.nextDouble();
+        System.out.println("Höhe: "); h = sc.nextDouble();
 
         s = Math.sqrt(Math.pow(r, 2)+Math.pow(h, 2));
         O = Math.PI*Math.pow(r, 2)+Math.PI*r*s;
