@@ -1,26 +1,39 @@
-import java.util.Date;
+import java.time.LocalDate;
+import java.time.Period;
+import java.time.format.DateTimeFormatter;
+import java.time.format.DateTimeParseException;
 import java.util.Scanner;
 
 public class age {
-    
+
     public static void main(String[] args) {
 
-        String name;
-        int birth, age;
+        String name, birthday;
         Scanner sc = new Scanner(System.in);
-    
-        System.out.println("Hallo, wie heißt du?"); 
-        System.out.println("Anzahl von SMS, die sie diesen Monat gesendet haben: "); SMSamount = sc.nextInt();
 
-        System.out.println("Grundgebühr - 5,99 Euro"); 
-        System.out.println("SMS 19ct & MMS 29ct"); 
-        System.out.println("Anzahl von SMS, die sie diesen Monat gesendet haben: "); SMSamount = sc.nextInt();
-        System.out.println("Anzahl von MMS, die sie diesen Monat gesendet haben: "); MMSamount = sc.nextInt();
+        System.out.println("Hallo, wie heißt du?");
+        name = sc.nextLine();
 
-        totalBILL = base + SMSamount*SMSbill + MMSamount*MMSbill;
+        System.out.println("Wann bist du geboren? (Format: dd.MM.yyyy)");
+        birthday = sc.nextLine();
 
-        System.out.println("Ihren Gebühren für diesen Monat: " + totalBILL + " Euro");
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd.MM.yyyy");
 
+        try {
+
+            LocalDate birthdate = LocalDate.parse(birthday, formatter);
+            LocalDate today = LocalDate.now();
+            int age = Period.between(birthdate, today).getYears();
+            System.out.println("Hallo " + name + "! Du bist " + age + " Jahre alt.");
+
+        } 
+        catch (DateTimeParseException e) {
+            
+            System.out.println("Das eingegebene Datum ist ungültig. Bitte benutze das Format: dd.MM.yyyy .");
+        
+        }
+
+        sc.close();
+        
     }
-
 }

@@ -16,12 +16,14 @@ public class bills {
         System.out.println("Rechner für Mobil Tarif Kosten"); 
         System.out.println("Grundgebühr - 5,99 Euro"); 
         System.out.println("SMS 19ct & MMS 29ct"); 
-        System.out.println("Anzahl von SMS, die sie diesen Monat gesendet haben: "); SMSamount = sc.nextInt();
-        System.out.println("Anzahl von MMS, die sie diesen Monat gesendet haben: "); MMSamount = sc.nextInt();
+        System.out.print("Anzahl von SMS, die sie diesen Monat gesendet haben: "); SMSamount = sc.nextInt();
+        System.out.print("Anzahl von MMS, die sie diesen Monat gesendet haben: "); MMSamount = sc.nextInt();
 
         totalBILL = base + SMSamount*SMSbill + MMSamount*MMSbill;
 
         System.out.println("Ihren Gebühren für diesen Monat: " + totalBILL + " Euro");
+
+        sc.close();
 
     }
 

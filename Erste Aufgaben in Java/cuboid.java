@@ -8,9 +8,9 @@ public class cuboid{
         Scanner sc = new Scanner(System.in);
         
         System.out.println("Volumen von Quader Rechner:");
-        System.out.println("Kantenlänge 1: "); x = sc.nextDouble();
-        System.out.println("Kantenlänge 2: "); y = sc.nextDouble();
-        System.out.println("Kantenlänge 3: "); z = sc.nextDouble();
+        System.out.print("Kantenlänge 1: "); x = sc.nextDouble();
+        System.out.print("Kantenlänge 2: "); y = sc.nextDouble();
+        System.out.print("Kantenlänge 3: "); z = sc.nextDouble();
 
         sum = 4*(x+y+z);
         V = x * y * z; 
@@ -19,6 +19,8 @@ public class cuboid{
         System.out.println("Gesammtkantenlänge: " + sum);
         System.out.println("Volumen von Quader: " + V);
         System.out.println("Oberfläche: " + O);
+
+        sc.close();
 
     }
 
