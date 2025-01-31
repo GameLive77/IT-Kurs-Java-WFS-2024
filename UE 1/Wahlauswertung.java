@@ -25,5 +25,7 @@ public class Wahlauswertung {
         System.out.println("Erikas Anteil: " + anteil2 + " %");
         System.out.println("Holgers Anteil: " + anteil3 + " %");
         System.out.println("Fritz Anteil: " + anteil4 +" %");
+
+        sc.close();
     }
 }
